@@ -10,6 +10,7 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
+
 import type { OptimizationSettings } from "../types/image";
 
 interface Props {
@@ -21,7 +22,7 @@ export function SettingsPanel({ settings, onChange }: Props) {
   return (
     <Stack spacing={2.5}>
       <Box>
-        <Typography fontWeight={800} gutterBottom>
+        <Typography fontWeight={600} gutterBottom>
           Output format
         </Typography>
         <Select
@@ -42,7 +43,7 @@ export function SettingsPanel({ settings, onChange }: Props) {
 
       <Box>
         <Stack direction="row" justifyContent="space-between">
-          <Typography fontWeight={800}>Quality</Typography>
+          <Typography fontWeight={600}>Quality</Typography>
           <Typography color="text.secondary">{settings.quality}%</Typography>
         </Stack>
         <Slider
@@ -62,7 +63,7 @@ export function SettingsPanel({ settings, onChange }: Props) {
       <Divider />
 
       <Box>
-        <Typography fontWeight={800} gutterBottom>
+        <Typography fontWeight={600} gutterBottom>
           Maximum dimensions
         </Typography>
 

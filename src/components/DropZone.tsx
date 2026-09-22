@@ -30,7 +30,7 @@ export function DropZone({ onFiles }: Props) {
   };
 
   return (
-    <Paper
+    <Box
       onDragOver={(event) => {
         event.preventDefault();
         setDragging(true);
@@ -86,6 +86,6 @@ export function DropZone({ onFiles }: Props) {
         multiple
         onChange={handleChange}
       />
-    </Paper>
+    </Box>
   );
 }

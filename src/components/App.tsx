@@ -18,6 +18,8 @@ import {
   createTheme,
   ThemeProvider,
 } from "@mui/material";
+import CloseIcon from '@mui/icons-material/Close';
+
 import AutoAwesomeRoundedIcon from "@mui/icons-material/AutoAwesomeRounded";
 import DownloadRoundedIcon from "@mui/icons-material/DownloadRounded";
 import DeleteSweepRoundedIcon from "@mui/icons-material/DeleteSweepRounded";
@@ -40,7 +42,7 @@ const theme = createTheme({
   },
   shape: { borderRadius: 6 },
   typography: {
-    fontFamily: "Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif",
+    fontFamily: "Google Sans Flex,Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif",
   },
 });
 
@@ -159,7 +161,7 @@ export default function App() {
               <AutoAwesomeRoundedIcon fontSize="small" />
             </Box>
             <Box>
-              <Typography fontWeight={900} lineHeight={1}>
+              <Typography fontWeight={700} lineHeight={1}>
                 PixelForge
               </Typography>
               <Typography variant="caption" color="text.secondary">
@@ -181,7 +183,7 @@ export default function App() {
         <Stack spacing={3}>
           <Paper sx={{ p: { xs: 3, md: 4 }, background: "linear-gradient(135deg,#111827,#30256f)", color: "white" }}>
             <Stack spacing={1}>
-              <Typography variant="h3" fontWeight={900} sx={{ fontSize: { xs: "2.2rem", md: "3.2rem" } }}>
+              <Typography variant="h3" fontWeight={600} sx={{ fontSize: { xs: "2.2rem", md: "3.2rem" } }}>
                 Compress. Convert. Optimize.
               </Typography>
               <Typography variant="h6" sx={{ opacity: 0.82, maxWidth: 760 }}>
@@ -300,8 +302,18 @@ export default function App() {
       </Container>
 
       <Drawer anchor="right" open={drawerOpen} onClose={() => setDrawerOpen(false)}>
+        <Stack direction="row" sx={{
+          justifyContent: "flex-end",
+          alignItems: "center",
+        }}>
+          <IconButton color="primary" aria-label="add to shopping cart" onClick={() => setDrawerOpen(false)}>
+            <CloseIcon />
+          </IconButton>
+        </Stack>
+
         <Box sx={{ width: { xs: "100vw", sm: 390 }, p: 3 }}>
-          <Typography variant="h5" fontWeight={900} mb={0.5}>
+
+          <Typography variant="h5" fontWeight={700} mb={0.5}>
             Optimization settings
           </Typography>
           <Typography variant="body2" color="text.secondary" mb={3}>
@@ -322,7 +334,7 @@ export default function App() {
 function Feature({ title, text }: { title: string; text: string }) {
   return (
     <Box sx={{ flex: 1 }}>
-      <Typography fontWeight={900}>{title}</Typography>
+      <Typography fontWeight={600}>{title}</Typography>
       <Typography variant="body2" color="text.secondary">
         {text}
       </Typography>
