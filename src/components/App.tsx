@@ -38,7 +38,7 @@ const theme = createTheme({
     secondary: { main: "#111827" },
     background: { default: "#f7f7fb", paper: "#ffffff" },
   },
-  shape: { borderRadius: 14 },
+  shape: { borderRadius: 6 },
   typography: {
     fontFamily: "Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif",
   },
