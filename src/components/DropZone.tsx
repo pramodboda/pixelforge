@@ -4,6 +4,8 @@ import CloudUploadRoundedIcon from "@mui/icons-material/CloudUploadRounded";
 import type { ChangeEvent, DragEvent } from "react";
 import { isSupportedImage } from "../services/format";
 
+import "./glass.css"
+
 interface Props {
   onFiles: (files: File[]) => void;
 }
@@ -49,14 +51,16 @@ export function DropZone({ onFiles }: Props) {
     >
       <Stack alignItems="center" spacing={2}>
         <Box
+          className="glass"
           sx={{
             width: 72,
             height: 72,
-            borderRadius: 3,
+            // borderRadius: 3,
             display: "grid",
             placeItems: "center",
-            bgcolor: "primary.main",
-            color: "primary.contrastText",
+            borderRadius: "50%",
+            // bgcolor: "primary.main",
+            // color: "primary.contrastText",
           }}
         >
           <CloudUploadRoundedIcon fontSize="large" />

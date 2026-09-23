@@ -1,0 +1,53 @@
+.glass{
+    box-shadow:
+    inset 2px -2px 1px -1px rgba(255, 255, 255, 0.9),
+    inset -2px 2px 1px -1px rgba(255, 255, 255, 0.9),
+    inset 6px -6px 1px -6px rgba(255, 255, 255, 0.55),
+    inset -6px 6px 1px -6px rgba(255, 255, 255, 0.55),
+    inset 0 0 2px rgba(0, 0, 0, 0.8),
+    0 4px 8px rgba(0, 0, 0, 0.2);
+    
+  /* background: rgba(176, 147, 255, 0.2); */
+  background: rgba(115, 136, 255, 0.2);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  cursor: pointer;
+  filter: brightness(0.9);
+  user-select: none;
+
+  border-radius: "50%";
+
+  
+}
+
+.glass:before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(var(--w) - 16px);
+    height: calc(var(--h) - 16px);
+    border-radius: var(--r);
+    border: 1px solid rgba(0, 0, 0, 0.9);
+    filter: blur(8px);
+  }
+  
+  .glass:after {
+    z-index: 501;
+    content: "";
+    position: absolute;
+    width: var(--w);
+    height: var(--h);
+    border-radius: var(--r);
+    filter: blur(7px);
+    background: linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.8) 0%,
+      transparent var(--tr),
+      transparent calc(100% - var(--tr)),
+      rgba(255, 255, 255, 0.8) 100%
+    );
+  }
+  

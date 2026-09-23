@@ -33,10 +33,13 @@ import { useImageStore } from "../store/imageStore";
 import { ImageWorkerClient } from "../services/workerClient";
 import { extensionFor } from "../services/format";
 
+import { indigo } from "@mui/material/colors"
+
 const theme = createTheme({
   palette: {
     mode: "light",
-    primary: { main: "#5b4bdb" },
+    // primary: { main: "#5b4bdb" },
+    primary: { main: indigo["A700"] },
     secondary: { main: "#111827" },
     background: { default: "#f7f7fb", paper: "#ffffff" },
   },
