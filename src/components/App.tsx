@@ -20,6 +20,7 @@ import {
 } from "@mui/material";
 import CloseIcon from '@mui/icons-material/Close';
 
+import { SiImagetoolbox } from "react-icons/si";
 import AutoAwesomeRoundedIcon from "@mui/icons-material/AutoAwesomeRounded";
 import DownloadRoundedIcon from "@mui/icons-material/DownloadRounded";
 import DeleteSweepRoundedIcon from "@mui/icons-material/DeleteSweepRounded";
@@ -152,16 +153,19 @@ export default function App() {
           <Stack direction="row" alignItems="center" spacing={1.25} sx={{ flexGrow: 1 }}>
             <Box
               sx={{
-                width: 36,
-                height: 36,
-                borderRadius: 2,
+                width: 38,
+                height: 38,
+                // borderRadius: 2,
                 bgcolor: "primary.main",
                 color: "white",
                 display: "grid",
                 placeItems: "center",
+                borderRadius: "50%",
               }}
             >
-              <AutoAwesomeRoundedIcon fontSize="small" />
+              {/* <AutoAwesomeRoundedIcon fontSize="small" /> */}
+              <SiImagetoolbox fontSize="large" />
+
             </Box>
             <Box>
               <Typography fontWeight={700} lineHeight={1}>
@@ -244,7 +248,7 @@ export default function App() {
                   </Button>
                   <Button
                     variant="contained"
-                    startIcon={<AutoAwesomeRoundedIcon />}
+                    startIcon={<SiImagetoolbox />}
                     onClick={optimizeAll}
                     disabled={images.some((image) => image.status === "processing")}
                   >
