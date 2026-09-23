@@ -44,6 +44,7 @@ export function DropZone({ onFiles }: Props) {
         borderColor: dragging ? "primary.main" : "divider",
         bgcolor: dragging ? "action.hover" : "background.paper",
         transition: "all .2s ease",
+        borderRadius: "16px"
       }}
     >
       <Stack alignItems="center" spacing={2}>

@@ -42,7 +42,7 @@ const theme = createTheme({
   },
   shape: { borderRadius: 6 },
   typography: {
-    fontFamily: "Google Sans Flex,Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif",
+    fontFamily: "Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif",
   },
 });
 
@@ -181,7 +181,7 @@ export default function App() {
 
       <Container maxWidth="xl" sx={{ py: 4 }}>
         <Stack spacing={3}>
-          <Paper sx={{ p: { xs: 3, md: 4 }, background: "linear-gradient(135deg,#111827,#30256f)", color: "white" }}>
+          {/* <Paper sx={{ p: { xs: 3, md: 4 }, background: "linear-gradient(135deg,#111827,#30256f)", color: "white" }}>
             <Stack spacing={1}>
               <Typography variant="h3" fontWeight={600} sx={{ fontSize: { xs: "2.2rem", md: "3.2rem" } }}>
                 Compress. Convert. Optimize.
@@ -197,7 +197,28 @@ export default function App() {
                 <Chip label="Web Worker + WASM" sx={{ bgcolor: "rgba(255,255,255,.12)", color: "white" }} />
               </Stack>
             </Stack>
-          </Paper>
+          </Paper> */}
+
+          <Box sx={{ p: { xs: 3, md: 4 }, textAlign: "center" }}>
+            <Stack spacing={1} sx={{ textAlign: "center" }}>
+              <Typography variant="h3" fontWeight={700} sx={{ fontSize: { xs: "2.2rem", md: "3rem" } }}>
+                Compress. Convert. Optimize.
+              </Typography>
+              <Typography variant="h5" fontWeight={700} sx={{ fontSize: { xs: "2.2rem", md: "1.8rem" } }}>
+                Image Compressor - Reduce JPG, PNG & WebP File Size
+              </Typography>
+              <Typography variant="h6" sx={{ opacity: 0.82 }}>
+                Professional image optimization that runs entirely in your browser. Your files stay on your device.
+              </Typography>
+              <Stack direction="row" spacing={1} flexWrap="wrap" mt={1} sx={{ justifyContent: "center" }}>
+                <Chip label="JPEG" sx={{ bgcolor: "rgba(0,0,0,.05)", }} />
+                <Chip label="PNG" sx={{ bgcolor: "rgba(0,0,0,.05)", }} />
+                <Chip label="WebP" sx={{ bgcolor: "rgba(0,0,0,.05)", }} />
+                <Chip label="AVIF" sx={{ bgcolor: "rgba(0,0,0,.05)", }} />
+                <Chip label="Web Worker + WASM" sx={{ bgcolor: "rgba(0,0,0,.05)", }} />
+              </Stack>
+            </Stack>
+          </Box>
 
           {images.length === 0 ? (
             <DropZone onFiles={addFiles} />
@@ -293,7 +314,7 @@ export default function App() {
 
           <Divider />
 
-          <Stack direction={{ xs: "column", md: "row" }} spacing={3}>
+          <Stack direction={{ xs: "column", md: "row" }} spacing={4}>
             <Feature title="Private by design" text="Images are processed locally. There is no image upload API or cloud storage." />
             <Feature title="Fast UI" text="CPU-heavy processing runs in a dedicated Web Worker so the interface stays responsive." />
             <Feature title="Modern formats" text="Export to JPEG, PNG, WebP or AVIF with configurable quality and dimensions." />
@@ -333,7 +354,8 @@ export default function App() {
 
 function Feature({ title, text }: { title: string; text: string }) {
   return (
-    <Box sx={{ flex: 1 }}>
+    // <Box sx={{ flex: 1 }}> // - old
+    <Box >
       <Typography fontWeight={600}>{title}</Typography>
       <Typography variant="body2" color="text.secondary">
         {text}
