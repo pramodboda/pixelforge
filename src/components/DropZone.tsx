@@ -6,6 +6,10 @@ import { isSupportedImage } from "../services/format";
 
 import "./glass.css"
 
+
+import { MdOutlineFileUpload } from "react-icons/md";
+
+
 interface Props {
   onFiles: (files: File[]) => void;
 }
@@ -63,7 +67,9 @@ export function DropZone({ onFiles }: Props) {
             // color: "primary.contrastText",
           }}
         >
-          <CloudUploadRoundedIcon fontSize="large" />
+          {/* <CloudUploadRoundedIcon fontSize="large" />? */}
+          <MdOutlineFileUpload fontSize="1.8rem" />
+
         </Box>
 
         <Typography variant="h5" fontWeight={800}>
@@ -81,7 +87,7 @@ export function DropZone({ onFiles }: Props) {
         <Typography variant="caption" color="text.secondary">
           Multiple files are supported. Nothing is uploaded to a server.
         </Typography>
-      </Stack>
+      </Stack >
 
       <input
         ref={inputRef}
@@ -91,6 +97,6 @@ export function DropZone({ onFiles }: Props) {
         multiple
         onChange={handleChange}
       />
-    </Box>
+    </Box >
   );
 }

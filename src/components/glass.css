@@ -1,27 +1,32 @@
 .glass{
+  position: relative;
     box-shadow:
     inset 2px -2px 1px -1px rgba(255, 255, 255, 0.9),
     inset -2px 2px 1px -1px rgba(255, 255, 255, 0.9),
     inset 6px -6px 1px -6px rgba(255, 255, 255, 0.55),
     inset -6px 6px 1px -6px rgba(255, 255, 255, 0.55),
     inset 0 0 2px rgba(0, 0, 0, 0.8),
-    0 4px 8px rgba(0, 0, 0, 0.2),
-    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
-    ;
+    0 4px 8px rgba(48, 79, 254, 0.5),
+    0px 50px 100px rgba(48, 79, 254, 0.5),
+    0px 30px 60px rgba(48, 79, 254, 0.3);
 
 
     /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px; */
     
   /* background: rgba(176, 147, 255, 0.2); */
-  background: rgba(115, 136, 255, 0.2);
+  /* background: rgba(115, 136, 255, 0.2); */
+  background: #c2cbff;
+background: linear-gradient(160deg,rgb(243, 245, 254) 0%, rgb(167, 185, 255) 100%);
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
   cursor: pointer;
   filter: brightness(0.9);
   user-select: none;
 
+
+  color: rgba(48, 79, 254, 0.7);
   border-radius: "50%";
-border:"1px solid red";
+  border:"7px solid red" !important;
   
 }
 
