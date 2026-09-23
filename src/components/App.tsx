@@ -204,10 +204,10 @@ export default function App() {
 
           <Box sx={{ p: { xs: 3, md: 4 }, textAlign: "center" }}>
             <Stack spacing={1} sx={{ textAlign: "center" }}>
-              <Typography variant="h3" fontWeight={700} sx={{ fontSize: { xs: "2.2rem", md: "3rem" } }}>
+              <Typography variant="h4" fontWeight={700}>
                 Compress. Convert. Optimize.
               </Typography>
-              <Typography variant="h5" fontWeight={700} sx={{ fontSize: { xs: "2.2rem", md: "1.8rem" } }}>
+              <Typography variant="h5" fontWeight={700}>
                 Image Compressor - Reduce JPG, PNG & WebP File Size
               </Typography>
               <Typography variant="h6" sx={{ opacity: 0.82 }}>
