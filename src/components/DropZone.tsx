@@ -44,7 +44,7 @@ export function DropZone({ onFiles }: Props) {
       onDragLeave={() => setDragging(false)}
       onDrop={handleDrop}
       sx={{
-        p: { xs: 4, md: 7 },
+        p: { xs: 4, md: 12 },
         textAlign: "center",
         border: "2px dashed",
         borderColor: dragging ? "primary.main" : "divider",
@@ -80,7 +80,7 @@ export function DropZone({ onFiles }: Props) {
           JPG, PNG, WebP and AVIF • Processed locally in your browser
         </Typography>
 
-        <Button variant="contained" size="large" onClick={() => inputRef.current?.click()}>
+        <Button variant="contained-pill" color='primary' size="large" onClick={() => inputRef.current?.click()}>
           Select images
         </Button>
 

@@ -48,6 +48,46 @@ const theme = createTheme({
   typography: {
     fontFamily: "Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif",
   },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          variants: [
+            {
+              props: {
+                variant: "contained-pill",
+                color: "primary",
+              },
+              style: ({ theme }) => ({
+                borderRadius: 999,
+
+                backgroundColor: theme.palette.primary.main,
+                color: theme.palette.primary.contrastText,
+
+                padding: "14px 25px",
+                minHeight: 40,
+
+                fontWeight: 700,
+                lineHeight: 1.2,
+
+                boxShadow: "none",
+
+                "&:hover": {
+                  backgroundColor: theme.palette.primary.dark,
+                  boxShadow: "none",
+                },
+
+                "&:disabled": {
+                  opacity: 0.5,
+                },
+              }),
+            },
+          ],
+        },
+      },
+    },
+  }
+
 });
 
 const saveBlob = (blob: Blob, filename: string) => {
@@ -350,7 +390,7 @@ export default function App() {
 
           <SettingsPanel settings={settings} onChange={setSettings} />
 
-          <Button fullWidth variant="contained" sx={{ mt: 4 }} onClick={() => setDrawerOpen(false)}>
+          <Button fullWidth variant="contained-pill" color='primary' sx={{ mt: 4 }} onClick={() => setDrawerOpen(false)}>
             Apply settings
           </Button>
         </Box>
